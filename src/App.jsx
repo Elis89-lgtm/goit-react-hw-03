@@ -36,7 +36,7 @@ const App = () => {
     setContacts((prev) => prev.filter((contact) => contact.id !== id));
   };
   return (
-    <div>
+    <div className="container">
       <h1>Phonebook</h1>
       <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={filter} onChange={handleFilterChange} />
