@@ -16,12 +16,13 @@ const initialValues = {
   name: "",
   number: "",
 };
-const ContactForm = () => {
+const ContactForm = ({ onAddContact }) => {
   const nameFieldId = useId();
   const numberFieldId = useId();
 
   const handleAddContact = (values, actions) => {
-    console.log(values);
+    onAddContact(values);
+
     actions.resetForm();
   };
   return (
