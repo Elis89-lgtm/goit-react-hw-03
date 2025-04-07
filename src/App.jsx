@@ -4,7 +4,7 @@ import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import SearchBox from "./components/SearchBox/SearchBox";
 import ContactList from "./components/ContactList/ContactList";
-
+import ConfettiEffect from "./components/ConfettiEffect/ConfettiEffect";
 const App = () => {
   const [contacts, setContacts] = useState(() => {
     const saved = localStorage.getItem("contacts");
@@ -37,6 +37,7 @@ const App = () => {
   };
   return (
     <div className="container">
+      <ConfettiEffect />
       <h1>Phonebook</h1>
       <ContactForm onAddContact={handleAddContact} />
       <SearchBox value={filter} onChange={handleFilterChange} />
