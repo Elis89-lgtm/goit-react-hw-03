@@ -49,7 +49,7 @@ const ConfettiEffect = () => {
     launchConfetti();
 
     // Запускати кожні 5 секунд
-    const interval = setInterval(launchConfetti, 100);
+    const interval = setInterval(launchConfetti, 2000);
 
     // Очистка інтервалу при розмонтуванні компонента
     return () => clearInterval(interval);
